@@ -1,9 +1,10 @@
 import Layout from "./components/Layout/Layout";
+import Tactics from "./components/Tactics";
 
 function App() {
   return (
     <Layout>
-      <div>HELLO WORLD</div>
+      <Tactics />
     </Layout>
   );
 }

@@ -8,6 +8,15 @@ const Layout: React.FC = ({ children }) => (
   <div className="vw-100 vh-100 d-flex">
     <div
       className={mergeClasses(
+        "position-absolute w-100 h-100",
+        classes.background
+      )}
+    >
+      <div className={classes.stripe1} />
+      <div className={classes.stripe2} />
+    </div>
+    <div
+      className={mergeClasses(
         "position-relative verflow-auto h-100",
         classes.left
       )}

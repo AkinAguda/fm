@@ -28,11 +28,12 @@ code {
   --maroon-3: #8b2636;
   --maroon-4: #7e2438;
   --purple-1: #2f1357;
-  --purple-2: #321958;
+  --purple-2: #38165c;
   --mint-1: #97b1cb;
   --mint-2: #a9b5d2;
   --mint-3: #5ffee9;
   --yellow-1: #f6d64f;
+  --light: white;
 }
 
 button {
