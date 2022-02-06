@@ -17,10 +17,6 @@
 }
 
 .pageContent {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
   padding-left: 40px;
 }
 
@@ -82,6 +78,8 @@
   position: relative;
 }
 
+/* Start of background-related styles */
+
 .background {
   position: absolute;
   width: 100%;
@@ -128,8 +126,6 @@
 
 .smallStripes {
   transform: translateX(-10px);
-  display: flex;
-  height: 100%;
   gap: 7px;
 }
 
@@ -148,9 +144,6 @@
 .closeEdge {
   width: 100px;
   background-color: var(--maroon-3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding-right: 20px;
 }
 
@@ -160,16 +153,7 @@
   height: 8px;
 }
 
-.controllers {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.controllers > button {
-  border: none;
-  background-color: transparent;
-}
+/* End of background-related styles */
 
 .controllers > :first-child svg {
   transform: rotate(-180deg);
@@ -203,9 +187,7 @@
 }
 
 .teamData > h1 {
-  font-weight: bolder;
   color: var(--mint-2);
-  text-transform: uppercase;
   font-size: 20px;
 }
 

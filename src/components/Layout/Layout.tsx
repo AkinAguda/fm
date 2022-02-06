@@ -6,10 +6,17 @@ import classes from "./Layout.module.css";
 
 const Layout: React.FC = ({ children }) => (
   <div className="vw-100 vh-100 d-flex">
-    <div className={classes.left}>
+    <div
+      className={mergeClasses(
+        "position-relative verflow-auto h-100",
+        classes.left
+      )}
+    >
       <Nav />
     </div>
-    <div className={mergeClasses("w-100 h-100", classes.right)}>
+    <div
+      className={mergeClasses("w-100 h-100 position-relative", classes.right)}
+    >
       <div className={mergeClasses(classes.header, "w-100")}>
         <Header />
       </div>

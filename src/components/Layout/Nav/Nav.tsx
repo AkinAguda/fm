@@ -16,7 +16,9 @@ const Nav: React.FC = () => (
       </div>
     </div>
     {navItems.map((navItem) => (
-      <NavItem {...navItem} />
+      <React.Fragment key={navItem.title}>
+        <NavItem {...navItem} />
+      </React.Fragment>
     ))}
   </div>
 );

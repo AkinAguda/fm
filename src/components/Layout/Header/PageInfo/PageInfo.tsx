@@ -34,7 +34,9 @@ const PageInfo: React.FC = () => (
               <div />
             </div>
             <div className={classes.bigStripe} />
-            <div className={classes.smallStripes}>
+            <div
+              className={mergeClasses(classes.smallStripes, "d-flex", "h-100")}
+            >
               <div />
               <div />
               <div />
@@ -42,7 +44,12 @@ const PageInfo: React.FC = () => (
             </div>
           </div>
           <div className={classes.gap} />
-          <div className={classes.closeEdge}>
+          <div
+            className={mergeClasses(
+              classes.closeEdge,
+              "d-flex flex-column justify-content-between"
+            )}
+          >
             <div />
             <div />
             <div />
@@ -60,13 +67,23 @@ const PageInfo: React.FC = () => (
           </div>
         </div>
 
-        <div className={classes.pageContent}>
+        <div
+          className={mergeClasses(
+            classes.pageContent,
+            "position-relative d-flex align-items-center h-100"
+          )}
+        >
           <img
             src="assets/images/barcelona.png"
             alt="Team logo"
             className={classes.teamLogo}
           />
-          <div className={classes.controllers}>
+          <div
+            className={mergeClasses(
+              classes.controllers,
+              "d-flex flex-column justify-content-around"
+            )}
+          >
             <button>
               <ArrowHeadSvg />
             </button>
@@ -78,7 +95,14 @@ const PageInfo: React.FC = () => (
           <MagnifyingGlassSvg className={classes.magnifyingGlass} />
 
           <div className={classes.teamData}>
-            <h1 className={classes.teamName}>Tactics</h1>
+            <h1
+              className={mergeClasses(
+                classes.teamName,
+                "text-uppercase fw-bolder"
+              )}
+            >
+              Tactics
+            </h1>
             <p className={classes.teamNextGame}>
               5th in the Spanish League - Next Match: Athletico (A) (Tomorrow
               19:45)
