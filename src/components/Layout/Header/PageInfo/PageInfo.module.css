@@ -34,7 +34,7 @@
   padding-left: 10px;
   padding-right: 25px;
   gap: 10px;
-  background-image: linear-gradient(var(--maroon-3), var(--maroon-2));
+  background-color: var(--maroon-2);
 }
 
 .arrowButtons > button {
@@ -190,6 +190,7 @@
 .magnifyingGlass {
   height: 20px;
   width: 20px;
+  fill: var(--mint-1);
 }
 
 .teamData {

@@ -11,7 +11,7 @@ const ProfileInfo: React.FC = () => (
       <button className={classes.globe}>
         <GlobeSvg />
       </button>
-      <button className={classes.questionMark}>
+      <button className={mergeClasses(classes.questionMark, "mx-2")}>
         <QuestionMarkSvg />
       </button>
       <button className={classes.footiumLogo}>
