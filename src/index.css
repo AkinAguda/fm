@@ -31,4 +31,10 @@ code {
   --purple-2: #321958;
   --mint-1: #97b1cb;
   --mint-2: #a9b5d2;
+  --mint-3: #5ffee9;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }

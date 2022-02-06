@@ -38,18 +38,25 @@ const PageInfo: React.FC = () => (
               <div />
               <div />
               <div />
+              <div />
             </div>
           </div>
           <div className={classes.gap} />
           <div className={classes.closeEdge}>
-            {new Array(7).fill(0).map(() => (
-              <div />
-            ))}
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
           </div>
           <div className={classes.edge}>
-            {new Array(5).fill(0).map(() => (
-              <div />
-            ))}
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
           </div>
         </div>
 

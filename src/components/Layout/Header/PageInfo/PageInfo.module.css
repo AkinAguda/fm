@@ -25,8 +25,8 @@
 }
 
 .pageContent > img {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
 }
 
 .arrowButtons {
@@ -74,7 +74,6 @@
 .edge > :nth-child(even) {
   width: 50%;
   animation: stretch-short 3.5s infinite linear;
-  animation-delay: 1s;
 }
 
 .teaminfo {
@@ -131,7 +130,7 @@
   transform: translateX(-10px);
   display: flex;
   height: 100%;
-  gap: 8px;
+  gap: 7px;
 }
 
 .smallStripes > div {

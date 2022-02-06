@@ -1,4 +1,10 @@
 .pageInfo {
-  width: 80%;
+  width: 75%;
   height: 100%;
+}
+
+.profileInfo {
+  width: 25%;
+  height: 100%;
+  padding-left: 10px;
 }
