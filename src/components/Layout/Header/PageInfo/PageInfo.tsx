@@ -103,7 +103,7 @@ const PageInfo: React.FC = () => (
             >
               Tactics
             </h1>
-            <p className={classes.teamNextGame}>
+            <p className="font-tiny">
               5th in the Spanish League - Next Match: Athletico (A) (Tomorrow
               19:45)
             </p>

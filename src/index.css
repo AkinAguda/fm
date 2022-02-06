@@ -39,3 +39,11 @@ button {
   background-color: transparent;
   border: none;
 }
+
+.font-normal {
+  font-size: 1rem;
+}
+
+.font-tiny {
+  font-size: 0.75rem;
+}

@@ -1,4 +1,3 @@
-import classes from "./App.module.css";
 import Layout from "./components/Layout/Layout";
 
 function App() {
