@@ -1,6 +1,7 @@
 import { mergeClasses } from "@footium/utility/functions";
 import React from "react";
 import Menu from "./Menu";
+import TacticsBoard from "./TacticsBoard";
 import classes from "./Tactics.module.css";
 
 const Tactics: React.FC = () => (
@@ -16,7 +17,9 @@ const Tactics: React.FC = () => (
     <div
       className={mergeClasses("px-4 py-4 d-flex h-full w-full", classes.main)}
     >
-      <div className={classes.left}></div>
+      <div className={classes.left}>
+        <TacticsBoard />
+      </div>
       <div className={classes.right}></div>
     </div>
   </div>

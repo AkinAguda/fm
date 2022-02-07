@@ -1,0 +1,32 @@
+.container {
+  height: 45px;
+  width: 100%;
+  background-color: var(--green-3);
+}
+
+.rewindButton {
+  width: 65px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rewindButton svg {
+  position: relative;
+  max-width: 11px;
+  fill: var(--light);
+  z-index: 2;
+  transform: translateX(-5px);
+}
+
+.rewindButtonbackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: skew(-15deg) translateX(-8px);
+  background-color: var(--green-1);
+}

@@ -34,6 +34,14 @@ code {
   --mint-3: #5ffee9;
   --yellow-1: #f6d64f;
   --light: white;
+  --green-1: #034b3e;
+  --green-2: #25695a;
+  --green-3: #4cb04f;
+  --green-4: #2d7e32;
+  --green-5: #24803d;
+  --green-6: #004e40;
+  --green-7: #017663;
+  --green-8: #006a57;
 }
 
 button {
@@ -47,4 +55,8 @@ button {
 
 .font-tiny {
   font-size: 0.75rem;
+}
+
+.font-small {
+  font-size: 0.875rem;
 }
