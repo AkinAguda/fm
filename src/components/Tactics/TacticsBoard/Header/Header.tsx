@@ -5,7 +5,7 @@ import TacticSelector from "./TacticSelector";
 import classes from "./Header.module.css";
 
 const Header: React.FC = () => (
-  <div className={mergeClasses(classes.container, "d-flex h-full")}>
+  <div className={mergeClasses(classes.container, "d-flex 100")}>
     <button className={classes.rewindButton}>
       <RewindSvg />
       <div className={classes.rewindButtonbackground} />

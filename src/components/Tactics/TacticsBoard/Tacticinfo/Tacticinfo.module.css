@@ -1,0 +1,43 @@
+.formationHeading {
+  color: var(--light);
+  opacity: 0.3;
+}
+
+.tacticStyle {
+  font-size: 16px;
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+}
+.tacticStyle svg {
+  fill: var(--light);
+}
+
+.separator {
+  margin: 5px;
+  background-color: var(--light);
+}
+
+.mentality {
+  color: var(--light);
+}
+
+.mentalitySelection {
+  background-color: var(--green-9);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.mentalitySelection svg {
+  fill: white;
+}
+
+.football {
+  height: 15px;
+  width: 15px;
+}
+
+.container {
+  overflow-y: auto;
+}

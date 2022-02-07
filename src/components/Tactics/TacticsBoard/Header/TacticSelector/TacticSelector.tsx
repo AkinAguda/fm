@@ -21,8 +21,8 @@ const TacticSelector: React.FC = () => (
       <button className={mergeClasses(classes.formationButton, "ms-1")}>
         <span>2</span>
       </button>
-      <div className={mergeClasses(classes.formationName, "p-2 ms-1")}>
-        <span>4-2-3-1 Wide Custom...</span>
+      <div className={mergeClasses(classes.formationName, "px-3 py-2 ms-1")}>
+        <span>4-2-3-1 Wide - Custom...</span>
       </div>
       <button className={mergeClasses(classes.formationButton, "ms-1")}>
         <span></span>

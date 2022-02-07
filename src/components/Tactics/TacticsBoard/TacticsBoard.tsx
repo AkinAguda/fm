@@ -1,10 +1,21 @@
 import React from "react";
+import { mergeClasses } from "@footium/utility/functions";
 import Header from "./Header";
+import Tacticinfo from "./Tacticinfo";
 import classes from "./TacticsBoard.module.css";
 
 const TacticsBoard: React.FC = () => (
   <div className={classes.container}>
-    <Header />
+    <div
+      className={mergeClasses("position-sticky top-0", classes.headerWrapper)}
+    >
+      <Header />
+    </div>
+    <div className="d-flex p-2 h-100">
+      <div className={mergeClasses(classes.tacticInfo, "h-100")}>
+        <Tacticinfo />
+      </div>
+    </div>
   </div>
 );
 

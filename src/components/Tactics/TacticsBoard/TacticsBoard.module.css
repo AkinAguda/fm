@@ -6,4 +6,17 @@
   border-bottom-left-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tacticInfo {
+  width: 20%;
+  min-width: 180px;
+  background-color: var(--green-1);
+  border-radius: 10px;
+}
+
+.headerWrapper {
+  z-index: 3;
 }

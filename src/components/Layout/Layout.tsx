@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import classes from "./Layout.module.css";
 
 const Layout: React.FC = ({ children }) => (
-  <div className="vw-100 vh-100 d-flex">
+  <div className={mergeClasses("vw-100 d-flex", classes.container)}>
     <div
       className={mergeClasses(
         "position-absolute w-100 h-100",

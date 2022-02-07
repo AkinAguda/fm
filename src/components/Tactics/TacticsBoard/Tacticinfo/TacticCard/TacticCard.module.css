@@ -1,0 +1,26 @@
+.container {
+  background-color: var(--green-9);
+  color: var(--light);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container svg {
+  fill: var(--light);
+  height: 15px;
+  width: 15px;
+}
+
+.description {
+  opacity: 0.3;
+}
+
+.change {
+  color: var(--light);
+}
+
+.change svg {
+  transform: rotate(180deg);
+  height: 12px;
+  width: 12px;
+}

@@ -7,7 +7,7 @@ import classes from "./ProfileInfo.module.css";
 
 const ProfileInfo: React.FC = () => (
   <div className="d-flex align-items-center w-100 h-100">
-    <div className="h-full d-flex align-tems-center pe-3">
+    <div className="h-100 d-flex align-tems-center pe-3">
       <button className={classes.globe}>
         <GlobeSvg />
       </button>
@@ -18,7 +18,7 @@ const ProfileInfo: React.FC = () => (
         <img src="assets/images/footium-logo.jpg" alt="footium logo" />
       </button>
     </div>
-    <div className={mergeClasses("h-75 w-full d-flex", classes.right)}>
+    <div className={mergeClasses("h-75 w-100 d-flex", classes.right)}>
       <div className={classes.filler} />
       <div className={classes.dateAndTime}>
         <div className={classes.dateAndTimeBackground} />

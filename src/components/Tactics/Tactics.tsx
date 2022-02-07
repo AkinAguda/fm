@@ -7,16 +7,14 @@ import classes from "./Tactics.module.css";
 const Tactics: React.FC = () => (
   <div
     className={mergeClasses(
-      "position-relative d-flex flex-column h-full",
+      "position-relative d-flex flex-column h-100",
       classes.container
     )}
   >
-    <div>
+    <div className={classes.menu}>
       <Menu />
     </div>
-    <div
-      className={mergeClasses("px-4 py-4 d-flex h-full w-full", classes.main)}
-    >
+    <div className={mergeClasses("p-4 d-flex", classes.main)}>
       <div className={classes.left}>
         <TacticsBoard />
       </div>
