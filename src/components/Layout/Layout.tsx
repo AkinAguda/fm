@@ -24,12 +24,15 @@ const Layout: React.FC = ({ children }) => (
       <Nav />
     </div>
     <div
-      className={mergeClasses("w-100 h-100 position-relative", classes.right)}
+      className={mergeClasses(
+        "w-100 h-100 position-relative d-flex flex-column",
+        classes.right
+      )}
     >
-      <div className={mergeClasses(classes.header, "w-100")}>
+      <div className={mergeClasses(classes.header)}>
         <Header />
       </div>
-      <div>{children}</div>
+      <div className={mergeClasses("h-100", classes.content)}>{children}</div>
     </div>
   </div>
 );
