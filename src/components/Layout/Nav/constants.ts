@@ -30,7 +30,7 @@ export const navItems: NavItemProps[] = [
   { Svg: TrafficConesSvg, title: "Training" },
   { Svg: FirstAidSvg, title: "Medical Center", line: true },
   { Svg: CalendarSvg, title: "Schedule" },
-  { Svg: TrophySvg, title: "Competition", line: true },
+  { Svg: TrophySvg, title: "Competitions", line: true },
   { Svg: MagnifyingGlassSvg, title: "Scouting" },
   { Svg: TransfersSvg, title: "Transfers", line: true, notifCount: 3 },
   { Svg: ShieldSvg, title: "Club Info" },

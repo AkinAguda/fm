@@ -15,7 +15,7 @@ const Tacticinfo: React.FC = () => (
     <div
       className={mergeClasses(classes.formationHeading, "fw-bold font-small")}
     >
-      TCTICAL STYLE
+      TACTICAL STYLE
     </div>
     <div className={mergeClasses(classes.tacticStyle, "fw-bold")}>
       TIKI-TAKA <ArrowHeadSvg />

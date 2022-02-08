@@ -18,7 +18,9 @@ const Tactics: React.FC = () => (
       <div className={classes.left}>
         <TacticsBoard />
       </div>
-      <div className={classes.right}></div>
+      <div className={classes.right}>
+        <TacticsBoard />
+      </div>
     </div>
   </div>
 );
