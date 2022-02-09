@@ -20,6 +20,7 @@ const TacticSelector: React.FC = () => (
         >
           {formations.map((formation, index) => (
             <button
+              key={formation}
               className={mergeClasses(classes.formationButton, "ms-1", [
                 activeFormation === formation,
                 classes.active,
