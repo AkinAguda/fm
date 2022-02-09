@@ -37,7 +37,7 @@ const Lineup: React.FC = () => (
                 <ArrowHeadSvg className={classes.arrowHead} />
               </div>
             </div>
-            <div className="position-relative h-100 w-100">
+            <div className={mergeClasses("position-relative w-100", classes.w)}>
               <div className={classes.backgroundWrapper}>
                 <div className={classes.pitchDesign}>
                   <div className={classes.homeBox}>

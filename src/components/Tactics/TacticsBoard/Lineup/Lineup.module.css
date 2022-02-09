@@ -79,6 +79,10 @@
   opacity: 0.7;
 }
 
+.w {
+  min-height: fit-content;
+}
+
 .pitchDesign {
   position: absolute;
   top: 0;
