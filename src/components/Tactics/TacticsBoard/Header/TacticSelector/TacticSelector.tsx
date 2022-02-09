@@ -6,7 +6,7 @@ import classes from "./TacticSelector.module.css";
 
 const TacticSelector: React.FC = () => (
   <TacticsContext.Consumer>
-    {({ formation }) => (
+    {({ formation, setFormation }) => (
       <div className="d-flex h-100 align-items-center">
         <TacticsSvg className={classes.tacticSvg} />
         <div className={mergeClasses("ms-1 font-small", classes.tacticsText)}>
@@ -19,11 +19,21 @@ const TacticSelector: React.FC = () => (
           )}
         >
           <button
-            className={mergeClasses(classes.formationButton, classes.active)}
+            className={mergeClasses(classes.formationButton, [
+              formation === "4-2-3-1",
+              classes.active,
+            ])}
+            onClick={() => setFormation("4-2-3-1")}
           >
             <span>1</span>
           </button>
-          <button className={mergeClasses(classes.formationButton, "ms-1")}>
+          <button
+            className={mergeClasses(classes.formationButton, "ms-1", [
+              formation === "4-3-3",
+              classes.active,
+            ])}
+            onClick={() => setFormation("4-3-3")}
+          >
             <span>2</span>
           </button>
           <div

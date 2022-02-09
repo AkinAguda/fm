@@ -35,12 +35,19 @@ export interface Substitiute extends Player {
 
 export type Formations = {
   "4-3-3": GridSpaceState[];
+  "4-2-3-1": GridSpaceState[];
 };
 
 export type FormationKey = keyof Formations;
 
 export type ContextType = {
   firstElevenPlayers: Player[];
+  subs: Substitiute[];
   formation: keyof Formations;
   filledOutFirstEleven: (Player | null)[];
+  onDragStart: (id: string) => void;
+  onDragEnd: (id: string) => void;
+  onDragOver: (id: string) => void;
+  draggedId: string;
+  setFormation: (value: keyof Formations) => void;
 };

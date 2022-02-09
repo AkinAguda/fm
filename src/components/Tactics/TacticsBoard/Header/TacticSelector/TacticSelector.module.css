@@ -38,6 +38,7 @@
   transform: skew(-15deg);
   border-radius: 3px;
   box-shadow: -1px 1px 0px 1px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
 }
 
 .active::before {

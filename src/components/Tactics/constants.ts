@@ -1,4 +1,10 @@
-import { Player, PlayerPositions, Formations, FormationKey } from "./types";
+import {
+  Player,
+  PlayerPositions,
+  Formations,
+  FormationKey,
+  Substitiute,
+} from "./types";
 import { fillAllPosWithRating } from "./functions";
 
 export const ALL_POSITIONS: PlayerPositions[] = [
@@ -130,7 +136,40 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
   },
 ];
 
-console.log(DEFAULT_FIRST_ELEVEN.length);
+export const DEFAULT_SUBS: Substitiute[] = [
+  {
+    positions: [
+      { position: "GK", rating: 81 },
+      ...fillAllPosWithRating(25, ["CF"]),
+    ],
+    name: { firstName: "Midorima", surname: "Kuroko" },
+    jerseyNumber: 19,
+    id: "wrfwoithrg743534",
+    isGk: true,
+    sub: true,
+  },
+  {
+    positions: [
+      { position: "LM", rating: 98 },
+      { position: "CM", rating: 97 },
+      ...fillAllPosWithRating(25, ["LM", "CM"]),
+    ],
+    name: { firstName: "Ichigo", surname: "Kurosaki" },
+    jerseyNumber: 44,
+    id: "wrfwoithrg743",
+    sub: true,
+  },
+  {
+    positions: [
+      { position: "CF", rating: 81 },
+      ...fillAllPosWithRating(25, ["CF"]),
+    ],
+    name: { firstName: "Ichigo", surname: "Kurosaki" },
+    jerseyNumber: 44,
+    id: "wrfwoithrg7435",
+    sub: true,
+  },
+];
 
 // prettier-ignore
 export const formations: Formations = {
@@ -142,10 +181,20 @@ export const formations: Formations = {
        "FILLED",  "FILLED",  "EMPTY",   "FILLED",  "FILLED",
        "INVALID", "EMPTY",   "EMPTY",   "EMPTY",   "INVALID",
        "INVALID", "INVALID", "FILLED",  "INVALID", "INVALID"
+    ],
+    "4-2-3-1": [
+      "INVALID",    "EMPTY",    "FILLED",  "EMPTY",    "INVALID",
+      "FILLED",      "EMPTY",   "FILLED",  "EMPTY",   "FILLED",
+      "INVALID",     "INVALID",  "INVALID",  "INVALID", "INVALID",
+      "EMPTY",    "FILLED",    "INVALID",   "FILLED",   "EMPTY",
+      "INVALID",     "INVALID",  "INVALID",  "INVALID", "INVALID",
+      "FILLED",  "FILLED",  "EMPTY",   "FILLED",  "FILLED",
+      "INVALID", "INVALID", "FILLED",  "INVALID", "INVALID"
     ]
 }
 
-export const DEFAULT_FORMATION: FormationKey = "4-3-3";
+export const DEFAULT_FORMATION: FormationKey = "4-2-3-1";
 
-console.log(formations["4-3-3"].length);
-console.log(formations["4-3-3"].filter((v) => v === "FILLED").length);
+// console.log(formations["4-3-3"].length);
+// console.log(formations["4-3-3"].filter((v) => v === "FILLED").length);
+// console.log(formations["4-2-3-1"].filter((v) => v === "FILLED").length);

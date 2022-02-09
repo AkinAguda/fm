@@ -13,8 +13,8 @@
 }
 
 .jerseyWrapper {
-  height: 50%;
-  width: 40%;
+  height: 50px;
+  width: 40px;
   position: relative;
   margin-top: auto;
   transform: translateY(5px);
@@ -23,6 +23,7 @@
 
 .jerseyNumber {
   position: absolute;
+  font-size: 0.825rem;
   color: var(--light);
   height: 100%;
   width: 100%;

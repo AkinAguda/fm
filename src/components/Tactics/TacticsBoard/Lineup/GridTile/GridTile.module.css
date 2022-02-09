@@ -1,0 +1,10 @@
+.hide {
+  opacity: 0.3;
+  transform: scale(0.9) translateY(10px) !important;
+}
+
+.container {
+  transition: 0.1s;
+  transform: translateY(10px);
+  cursor: move;
+}
