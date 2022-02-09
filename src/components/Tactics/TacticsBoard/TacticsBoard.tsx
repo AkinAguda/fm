@@ -12,8 +12,8 @@ const TacticsBoard: React.FC = () => (
     >
       <Header />
     </div>
-    <div className="d-flex p-2 h-100">
-      <div className={mergeClasses(classes.tacticInfo, "h-100")}>
+    <div className={mergeClasses("d-flex p-2", classes.tacticBoardMain)}>
+      <div className={classes.tacticInfo}>
         <Tacticinfo />
       </div>
       <div className="w-100 ms-3">

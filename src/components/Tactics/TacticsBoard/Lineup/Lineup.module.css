@@ -12,6 +12,7 @@
   column-gap: 5px;
   position: relative;
   transform: perspective(1300px) rotateX(10deg);
+  max-height: 700px;
 }
 
 .formationHeading {
@@ -81,6 +82,7 @@
 
 .w {
   min-height: fit-content;
+  max-height: 700px;
 }
 
 .pitchDesign {

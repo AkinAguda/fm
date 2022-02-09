@@ -7,10 +7,7 @@ import classes from "./Tacticinfo.module.css";
 
 const Tacticinfo: React.FC = () => (
   <div
-    className={mergeClasses(
-      classes.container,
-      "p-2 text-center overflow-auto h-100"
-    )}
+    className={mergeClasses(classes.container, "p-2 text-center overflow-auto")}
   >
     <div
       className={mergeClasses(classes.formationHeading, "fw-bold font-small")}
