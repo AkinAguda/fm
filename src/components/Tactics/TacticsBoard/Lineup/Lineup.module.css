@@ -24,16 +24,23 @@
 
 .teamViewer {
   height: 70%;
-  gap: 10px;
+  gap: 50px;
 }
 
 .subs {
   height: 100%;
-  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subs > * {
+  height: fit-content;
 }
 
 .subsWrapper {
-  width: 200px;
+  width: 30%;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -73,6 +80,7 @@
   width: 100%;
   transform: perspective(1300px) rotateX(10deg);
   border: 1px solid var(--light);
+  opacity: 0.7;
 }
 
 .pitchDesign {
@@ -155,4 +163,8 @@
   width: 100px;
   border: 1px solid var(--light);
   border-radius: 100%;
+}
+
+.subComponentWrapper {
+  cursor: move;
 }

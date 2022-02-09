@@ -22,15 +22,12 @@ export interface Player {
   jerseyNumber: number;
   id: string;
   isGk?: boolean;
+  isSub?: boolean;
 }
 
 export interface GridSpace {
   state: GridSpaceState;
   playerData: Player | null;
-}
-
-export interface Substitiute extends Player {
-  sub: true;
 }
 
 export type Formations = {
@@ -42,12 +39,12 @@ export type FormationKey = keyof Formations;
 
 export type ContextType = {
   firstElevenPlayers: Player[];
-  subs: Substitiute[];
+  subs: Player[];
   formation: keyof Formations;
   filledOutFirstEleven: (Player | null)[];
-  onDragStart: (id: string) => void;
+  onDragStart: (id: string, isSub?: boolean) => void;
   onDragEnd: (id: string) => void;
-  onDragOver: (id: string) => void;
-  draggedId: string;
+  onDragOver: (id: string, isSub?: boolean) => void;
+  dragged: { id: string; isSub?: boolean };
   setFormation: (value: keyof Formations) => void;
 };

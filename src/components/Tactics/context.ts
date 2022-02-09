@@ -10,7 +10,7 @@ const defaultValues: ContextType = {
   onDragStart: () => {},
   onDragEnd: () => {},
   onDragOver: () => {},
-  draggedId: "",
+  dragged: { id: "" },
   setFormation: () => {},
 };
 

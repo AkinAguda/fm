@@ -9,15 +9,17 @@ const GridTile: React.FC<{
   player: Player | null;
 }> = ({ player }) => (
   <TacticsContext.Consumer>
-    {({ onDragEnd, onDragOver, onDragStart, draggedId }) => (
+    {({ onDragEnd, onDragOver, onDragStart, dragged }) => (
       <div
         className={mergeClasses(classes.container, [
-          draggedId === player?.id,
+          dragged.id === player?.id,
           classes.hide,
         ])}
       >
         {player ? (
           <div
+            draggable
+            className={classes.playerComponentWrapper}
             onDragStart={(e) => {
               onDragStart(player.id);
             }}
@@ -25,6 +27,7 @@ const GridTile: React.FC<{
               onDragEnd(player.id);
             }}
             onDragOver={(e) => {
+              e.preventDefault();
               onDragOver(player.id);
             }}
           >

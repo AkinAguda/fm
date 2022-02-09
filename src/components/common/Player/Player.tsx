@@ -4,7 +4,7 @@ import { PlayerContainerProps } from "./types";
 import classes from "./Player.module.css";
 
 const Player: React.FC<PlayerContainerProps> = ({ player }) => (
-  <div className={classes.container} draggable>
+  <div className={classes.container}>
     <div className={classes.jerseyWrapper}>
       <img
         src={`assets/images/${player.isGk ? "gk" : "player"}-jersey.png`}

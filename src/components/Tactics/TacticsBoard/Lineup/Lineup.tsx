@@ -4,11 +4,19 @@ import { ReactComponent as ArrowHeadSvg } from "@footium/assets/svgs/arrow-head.
 import { formations } from "../../constants";
 import { TacticsContext } from "../../context";
 import GridTile from "./GridTile";
+import Substitiute from "../../../common/Substitute";
 import classes from "./Lineup.module.css";
 
 const Lineup: React.FC = () => (
   <TacticsContext.Consumer>
-    {({ formation, filledOutFirstEleven }) => (
+    {({
+      formation,
+      filledOutFirstEleven,
+      subs,
+      onDragEnd,
+      onDragOver,
+      onDragStart,
+    }) => (
       <div className={mergeClasses(classes.container, "h-100 w-100")}>
         <div className={mergeClasses(classes.teamViewer, "d-flex")}>
           <div className="w-100 ms-2">
@@ -80,7 +88,29 @@ const Lineup: React.FC = () => (
             <div className="text-light d-flex align-items-center justify-content-center text-center mb-2 font-small">
               Max. of 7
             </div>
-            <div className={classes.subs}></div>
+            <div className={classes.subs}>
+              {subs.map((sub) => (
+                <React.Fragment key={sub.id}>
+                  <div
+                    draggable
+                    className={classes.subComponentWrapper}
+                    onDragStart={(e) => {
+                      onDragStart(sub.id, true);
+                    }}
+                    onDragEnd={(e) => {
+                      console.log("EEk");
+                      onDragEnd(sub.id);
+                    }}
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      onDragOver(sub.id, true);
+                    }}
+                  >
+                    <Substitiute sub={sub} />
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>

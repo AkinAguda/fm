@@ -1,10 +1,4 @@
-import {
-  Player,
-  PlayerPositions,
-  Formations,
-  FormationKey,
-  Substitiute,
-} from "./types";
+import { Player, PlayerPositions, Formations, FormationKey } from "./types";
 import { fillAllPosWithRating } from "./functions";
 
 export const ALL_POSITIONS: PlayerPositions[] = [
@@ -79,7 +73,7 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
       { position: "RM", rating: 97 },
       ...fillAllPosWithRating(30, ["RM"]),
     ],
-    name: { firstName: "Uzumaki", surname: "Naruto" },
+    name: { firstName: "Naruto", surname: "Uzumaki" },
     jerseyNumber: 17,
     id: "wrfwoithrg4",
   },
@@ -101,7 +95,7 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
       { position: "CF", rating: 97 },
       ...fillAllPosWithRating(22, ["RW", "CF"]),
     ],
-    name: { firstName: "Minato", surname: "Namikaze" },
+    name: { firstName: "Mina", surname: "Namikaze" },
     jerseyNumber: 20,
     id: "wrfwoithrg6",
   },
@@ -111,7 +105,7 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
       { position: "CM", rating: 97 },
       ...fillAllPosWithRating(25, ["LM", "CM"]),
     ],
-    name: { firstName: "Monkey", surname: "D. Luffy" },
+    name: { firstName: "Monk", surname: "D.Luffy" },
     jerseyNumber: 8,
     id: "wrfwoithrg7",
   },
@@ -120,7 +114,7 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
       { position: "CM", rating: 97 },
       ...fillAllPosWithRating(30, ["CM"]),
     ],
-    name: { firstName: "Rononoa", surname: "Zoro" },
+    name: { firstName: "Rona", surname: "Zoro" },
     jerseyNumber: 3,
     id: "wrfwoithrg8",
   },
@@ -129,24 +123,24 @@ export const DEFAULT_FIRST_ELEVEN: Player[] = [
       { position: "GK", rating: 100 },
       ...fillAllPosWithRating(30, ["GK"]),
     ],
-    name: { firstName: "Masashi", surname: "Kishimoto" },
+    name: { firstName: "Mosh", surname: "Kishimoto" },
     jerseyNumber: 1,
     id: "wrfwoithrg9",
     isGk: true,
   },
 ];
 
-export const DEFAULT_SUBS: Substitiute[] = [
+export const DEFAULT_SUBS: Player[] = [
   {
     positions: [
       { position: "GK", rating: 81 },
       ...fillAllPosWithRating(25, ["CF"]),
     ],
-    name: { firstName: "Midorima", surname: "Kuroko" },
+    name: { firstName: "Midori", surname: "Kuroko" },
     jerseyNumber: 19,
     id: "wrfwoithrg743534",
     isGk: true,
-    sub: true,
+    isSub: true,
   },
   {
     positions: [
@@ -157,17 +151,17 @@ export const DEFAULT_SUBS: Substitiute[] = [
     name: { firstName: "Ichigo", surname: "Kurosaki" },
     jerseyNumber: 44,
     id: "wrfwoithrg743",
-    sub: true,
+    isSub: true,
   },
   {
     positions: [
       { position: "CF", rating: 81 },
       ...fillAllPosWithRating(25, ["CF"]),
     ],
-    name: { firstName: "Ichigo", surname: "Kurosaki" },
-    jerseyNumber: 44,
+    name: { firstName: "Sado", surname: "Rukia" },
+    jerseyNumber: 47,
     id: "wrfwoithrg7435",
-    sub: true,
+    isSub: true,
   },
 ];
 

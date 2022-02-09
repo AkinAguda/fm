@@ -18,7 +18,6 @@
   position: relative;
   margin-top: auto;
   transform: translateY(5px);
-  z-index: 2;
 }
 
 .jerseyNumber {
@@ -57,14 +56,13 @@
 
 .position {
   color: var(--light);
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 5px;
 }
 
 .playerInfo {
   background-color: #044e42;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
 }
 
