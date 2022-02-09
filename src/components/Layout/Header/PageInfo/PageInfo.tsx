@@ -18,7 +18,7 @@ const PageInfo: React.FC = () => (
         classes.container
       )}
     >
-      <div className={mergeClasses(classes.arrowButtons, "d-flex h-100")}>
+      <div className={mergeClasses(classes.arrowButtons, "h-100")}>
         <button>
           <ArrowSvg />
         </button>

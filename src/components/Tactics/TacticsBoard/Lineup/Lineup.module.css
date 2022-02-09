@@ -56,10 +56,6 @@
   gap: 2px;
 }
 
-.background > .tile {
-  /* border: 2px solid var(--green-4); */
-}
-
 .filled {
   background-color: #0db94b;
 }

@@ -4,6 +4,18 @@
   height: calc(100% - 47px);
 }
 
+@media (max-width: 1650px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 930px) {
+  .menu {
+    display: none;
+  }
+}
+
 .main > div {
   flex: 1 1 0;
   height: 100%;

@@ -31,6 +31,7 @@
   padding-right: 25px;
   gap: 10px;
   background-color: var(--maroon-2);
+  display: flex;
 }
 
 .arrowButtons > button {
@@ -193,4 +194,10 @@
 
 .teamData > p {
   color: var(--mint-2);
+}
+
+@media (max-width: 935px) {
+  .arrowButtons {
+    display: none !important;
+  }
 }
