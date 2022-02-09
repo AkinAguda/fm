@@ -47,4 +47,19 @@ export type ContextType = {
   onDragOver: (id: string, isSub?: boolean) => void;
   dragged: { id: string; isSub?: boolean };
   setFormation: (value: keyof Formations) => void;
+  gkJerseyUrl: string;
+  playerJerseyUrl: string;
+  formations: (keyof Formations)[];
 };
+
+export interface Team {
+  firstEleven: Player[];
+  subs: Player[];
+}
+
+export interface TacticsContainerProps {
+  team: Team;
+  formations: FormationKey[];
+  playerJerseyUrl: string;
+  gkJerseyUrl: string;
+}

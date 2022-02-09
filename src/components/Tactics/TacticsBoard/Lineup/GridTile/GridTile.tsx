@@ -1,15 +1,22 @@
 import React from "react";
-import { Player } from "../../../types";
+import { Player } from "../../types";
 import PlayerComponent from "../../../../common/Player";
 import classes from "./GridTile.module.css";
-import { TacticsContext } from "../../../context";
+import { TacticsContext } from "../../context";
 import { mergeClasses } from "@footium/utility/functions";
 
 const GridTile: React.FC<{
   player: Player | null;
 }> = ({ player }) => (
   <TacticsContext.Consumer>
-    {({ onDragEnd, onDragOver, onDragStart, dragged }) => (
+    {({
+      onDragEnd,
+      onDragOver,
+      onDragStart,
+      dragged,
+      playerJerseyUrl,
+      gkJerseyUrl,
+    }) => (
       <div
         className={mergeClasses(classes.container, [
           dragged.id === player?.id,
@@ -31,7 +38,11 @@ const GridTile: React.FC<{
               onDragOver(player.id);
             }}
           >
-            <PlayerComponent player={player} />
+            <PlayerComponent
+              player={player}
+              playerJerseyUrl={playerJerseyUrl}
+              gkJerseyUrl={gkJerseyUrl}
+            />
           </div>
         ) : (
           <></>

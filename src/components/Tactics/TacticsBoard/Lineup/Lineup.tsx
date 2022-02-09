@@ -1,8 +1,8 @@
 import React from "react";
 import { mergeClasses } from "@footium/utility/functions";
 import { ReactComponent as ArrowHeadSvg } from "@footium/assets/svgs/arrow-head.svg";
-import { formations } from "../../constants";
-import { TacticsContext } from "../../context";
+import { formations } from "../constants";
+import { TacticsContext } from "../context";
 import GridTile from "./GridTile";
 import Substitiute from "../../../common/Substitute";
 import classes from "./Lineup.module.css";
@@ -17,6 +17,8 @@ const Lineup: React.FC = () => (
       onDragOver,
       onDragStart,
       dragged,
+      playerJerseyUrl,
+      gkJerseyUrl,
     }) => (
       <div className={mergeClasses(classes.container, "h-100 w-100")}>
         <div className={mergeClasses(classes.teamViewer, "d-flex")}>
@@ -109,7 +111,11 @@ const Lineup: React.FC = () => (
                       onDragOver(sub.id, true);
                     }}
                   >
-                    <Substitiute sub={sub} />
+                    <Substitiute
+                      sub={sub}
+                      playerJerseyUrl={playerJerseyUrl}
+                      gkJerseyUrl={gkJerseyUrl}
+                    />
                   </div>
                 </React.Fragment>
               ))}

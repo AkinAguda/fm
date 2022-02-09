@@ -1,10 +1,9 @@
 import { createContext } from "react";
 import { ContextType } from "./types";
-import { DEFAULT_FIRST_ELEVEN, DEFAULT_SUBS } from "./constants";
 
 const defaultValues: ContextType = {
-  firstElevenPlayers: { ...DEFAULT_FIRST_ELEVEN },
-  subs: { ...DEFAULT_SUBS },
+  firstElevenPlayers: [],
+  subs: [],
   formation: "4-3-3",
   filledOutFirstEleven: [],
   onDragStart: () => {},
@@ -12,6 +11,9 @@ const defaultValues: ContextType = {
   onDragOver: () => {},
   dragged: { id: "" },
   setFormation: () => {},
+  gkJerseyUrl: "",
+  playerJerseyUrl: "",
+  formations: [],
 };
 
 export const TacticsContext = createContext(defaultValues);

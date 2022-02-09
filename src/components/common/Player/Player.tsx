@@ -3,11 +3,15 @@ import { ReactComponent as ProfileSvg } from "@footium/assets/svgs/profile.svg";
 import { PlayerContainerProps } from "./types";
 import classes from "./Player.module.css";
 
-const Player: React.FC<PlayerContainerProps> = ({ player }) => (
+const Player: React.FC<PlayerContainerProps> = ({
+  player,
+  playerJerseyUrl,
+  gkJerseyUrl,
+}) => (
   <div className={classes.container}>
     <div className={classes.jerseyWrapper}>
       <img
-        src={`assets/images/${player.isGk ? "gk" : "player"}-jersey.png`}
+        src={player.isGk ? gkJerseyUrl : playerJerseyUrl}
         alt="jersey"
         className={classes.jersey}
       />

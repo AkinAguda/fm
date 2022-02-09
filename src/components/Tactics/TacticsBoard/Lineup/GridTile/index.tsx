@@ -1,5 +1,5 @@
 import React from "react";
-import { Player, GridSpaceState } from "../../../types";
+import { Player, GridSpaceState } from "../../types";
 import GridTile from "./GridTile";
 
 const GridTileContainer: React.FC<{
