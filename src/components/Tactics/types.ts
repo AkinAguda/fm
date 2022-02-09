@@ -43,7 +43,7 @@ export type ContextType = {
   formation: keyof Formations;
   filledOutFirstEleven: (Player | null)[];
   onDragStart: (id: string, isSub?: boolean) => void;
-  onDragEnd: (id: string) => void;
+  onDragEnd: () => void;
   onDragOver: (id: string, isSub?: boolean) => void;
   dragged: { id: string; isSub?: boolean };
   setFormation: (value: keyof Formations) => void;

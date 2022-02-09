@@ -167,4 +167,10 @@
 
 .subComponentWrapper {
   cursor: move;
+  transition: 0.1s;
+}
+
+.hide {
+  opacity: 0.3;
+  transform: scale(0.9) translateY(10px) !important;
 }

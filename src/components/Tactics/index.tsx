@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   DEFAULT_FIRST_ELEVEN,
   DEFAULT_FORMATION,
@@ -21,32 +21,43 @@ const TacticsContainer: React.FC = () => {
   const [dragged, setdragged] = useState<{ id: string; isSub?: boolean }>({
     id: "",
   });
+  const hovered = useRef<{ id: string; isSub?: boolean }>({
+    id: "",
+    isSub: false,
+  });
+
   const onDragStart = (id: string, isSub?: boolean) => {
     setdragged({ id, isSub });
   };
 
-  const onDragEnd = (id: string) => {
-    setdragged({ id: "", isSub: false });
-  };
-
-  const onDragOver = (id: string, isSub?: boolean) => {
+  const onDragEnd = () => {
+    const { id, isSub } = hovered.current;
     if (dragged.id) {
       const firstElevenCopy = [...firstElevenPlayers];
+      const subsCopy = [...subs];
       if (!dragged.isSub) {
-        const indexA = firstElevenCopy.findIndex((p) => p.id === id);
+        const arr = hovered.current.isSub ? subsCopy : firstElevenCopy;
+
+        const indexA = arr.findIndex((p) => p.id === id);
         const indexB = firstElevenCopy.findIndex((p) => p.id === dragged.id);
 
         if (indexA >= 0 && indexB >= 0) {
-          const temp = { ...firstElevenCopy[indexA] };
-          firstElevenCopy[indexA] = { ...firstElevenCopy[indexB] };
+          const temp = { ...arr[indexA] };
+          arr[indexA] = { ...firstElevenCopy[indexB] };
           firstElevenCopy[indexB] = temp;
         }
-        setFirstElevenPlayers(firstElevenCopy);
-        setFilledOutFirstEleven(
-          fillFormationSpacesWithNull(firstElevenCopy, formation)
-        );
+        if (isSub) {
+          setSubs(arr);
+          setFirstElevenPlayers(firstElevenCopy);
+          setFilledOutFirstEleven(
+            fillFormationSpacesWithNull(firstElevenCopy, formation)
+          );
+        } else {
+          setFirstElevenPlayers(arr);
+          setSubs(subsCopy);
+          setFilledOutFirstEleven(fillFormationSpacesWithNull(arr, formation));
+        }
       } else {
-        const subsCopy = [...subs];
         const arr = isSub ? subsCopy : firstElevenCopy;
 
         const indexA = arr.findIndex((p) => p.id === id);
@@ -63,10 +74,15 @@ const TacticsContainer: React.FC = () => {
           setFirstElevenPlayers(arr);
           setSubs(subsCopy);
           setFilledOutFirstEleven(fillFormationSpacesWithNull(arr, formation));
-          onDragEnd(id);
         }
       }
     }
+    hovered.current = { id: "", isSub: false };
+    setdragged({ id: "", isSub: false });
+  };
+
+  const onDragOver = (id: string, isSub?: boolean) => {
+    hovered.current = { id, isSub };
   };
 
   const setFormationHandler = (formation: keyof Formations) => {

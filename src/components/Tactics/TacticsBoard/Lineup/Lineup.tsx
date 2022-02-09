@@ -16,6 +16,7 @@ const Lineup: React.FC = () => (
       onDragEnd,
       onDragOver,
       onDragStart,
+      dragged,
     }) => (
       <div className={mergeClasses(classes.container, "h-100 w-100")}>
         <div className={mergeClasses(classes.teamViewer, "d-flex")}>
@@ -93,13 +94,15 @@ const Lineup: React.FC = () => (
                 <React.Fragment key={sub.id}>
                   <div
                     draggable
-                    className={classes.subComponentWrapper}
+                    className={mergeClasses(classes.subComponentWrapper, [
+                      dragged.id === sub.id,
+                      classes.hide,
+                    ])}
                     onDragStart={(e) => {
                       onDragStart(sub.id, true);
                     }}
                     onDragEnd={(e) => {
-                      console.log("EEk");
-                      onDragEnd(sub.id);
+                      onDragEnd();
                     }}
                     onDragOver={(e) => {
                       e.preventDefault();

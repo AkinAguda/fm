@@ -24,7 +24,7 @@ const GridTile: React.FC<{
               onDragStart(player.id);
             }}
             onDragEnd={(e) => {
-              onDragEnd(player.id);
+              onDragEnd();
             }}
             onDragOver={(e) => {
               e.preventDefault();
