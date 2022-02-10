@@ -9,3 +9,9 @@ then
 `npm start`
 
 Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Features
+
+- Fomrmation changing
+- Drag and drop players on and off the bench
+- Swap player positions on the field by dragging and dropping them
