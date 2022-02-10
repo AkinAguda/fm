@@ -1,10 +1,11 @@
-Run
+![](https://res.cloudinary.com/nettik-technologies/image/upload/v1644452070/Screenshot_199.png)
 
-### `npm install`
+In your CLI, in the project directory, ensure you have [node](https://nodejs.org/en/download/) installed and run:
 
-Then
+`npm install`
 
-### `npm start`
+then
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm start`
+
+Then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
