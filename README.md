@@ -17,3 +17,5 @@ Then open [http://localhost:3000](http://localhost:3000) to view it in the brows
 - Swap player positions on the field by dragging and dropping them
 
 View Live [**HERE**](https://fm-mock.netlify.app/)
+
+![](https://res.cloudinary.com/nettik-technologies/image/upload/v1644452634/FM_UI_build_-_Google_Chrome_2022-02-10_01-19-04.gif)
