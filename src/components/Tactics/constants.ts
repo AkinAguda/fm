@@ -146,6 +146,47 @@ export const team1: Team = {
       id: "wrfwoithrg7435",
       isSub: true,
     },
+    {
+      positions: [
+        { position: "CB", rating: 50 },
+        ...fillAllPosWithRating(25, ["CB"]),
+      ],
+      name: { firstName: "Momo", surname: "Shiki" },
+      jerseyNumber: 32,
+      id: "wrfwoithrg743554",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "LB", rating: 42 },
+        ...fillAllPosWithRating(25, ["LB"]),
+      ],
+      name: { firstName: "Frank", surname: "Ocean" },
+      jerseyNumber: 33,
+      id: "wrfwoithrg74354354",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "RB", rating: 42 },
+        ...fillAllPosWithRating(25, ["RB"]),
+      ],
+      name: { firstName: "Bart", surname: "Lomeou" },
+      jerseyNumber: 38,
+      id: "wrfwoithrg7435fdf4354",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "GK", rating: 70 },
+        ...fillAllPosWithRating(25, ["GK"]),
+      ],
+      name: { firstName: "Bob", surname: "Sponge" },
+      jerseyNumber: 38,
+      id: "wrfwoithrg7435fd343f4354",
+      isSub: true,
+      isGk: true,
+    },
   ],
 };
 
@@ -293,6 +334,47 @@ export const team2: Team = {
       jerseyNumber: 47,
       id: "wrfwoithrg7435",
       isSub: true,
+    },
+    {
+      positions: [
+        { position: "CB", rating: 50 },
+        ...fillAllPosWithRating(25, ["CB"]),
+      ],
+      name: { firstName: "Momo", surname: "Shiki" },
+      jerseyNumber: 32,
+      id: "wrfwoithrg743554",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "LB", rating: 42 },
+        ...fillAllPosWithRating(25, ["LB"]),
+      ],
+      name: { firstName: "Frank", surname: "Ocean" },
+      jerseyNumber: 33,
+      id: "wrfwoithrg74354354",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "RB", rating: 42 },
+        ...fillAllPosWithRating(25, ["RB"]),
+      ],
+      name: { firstName: "Bart", surname: "Lomeou" },
+      jerseyNumber: 38,
+      id: "wrfwoithrg7435fdf4354",
+      isSub: true,
+    },
+    {
+      positions: [
+        { position: "GK", rating: 70 },
+        ...fillAllPosWithRating(25, ["GK"]),
+      ],
+      name: { firstName: "Bob", surname: "Sponge" },
+      jerseyNumber: 38,
+      id: "wrfwoithrg7435fd343f4354",
+      isSub: true,
+      isGk: true,
     },
   ],
 };
