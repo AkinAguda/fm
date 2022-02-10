@@ -13,8 +13,8 @@ Then open [http://localhost:3000](http://localhost:3000) to view it in the brows
 ### Features
 
 - Formation changing
-- Drag and drop players on and off the bench
-- Swap player positions on the field by dragging and dropping them
+- Drag and drop players on and off the pitch
+- Swap player positions on the pitch by dragging and dropping them
 
 View Live [**HERE**](https://fm-mock.netlify.app/)
 
